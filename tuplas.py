@@ -1,0 +1,25 @@
+grupo1 = ("daniel","gabriel","felipe",200,100,"daniel" )
+print ("###### tuplas 5 #####")
+print (type(grupo1))
+print (grupo1 [0])
+print ("el elemento se repite:", grupo1.count("daniel"))
+print ("indece del elemento:", grupo1.index("daniel"))
+"""grupo[0] = "cristia"
+print (grupo1)"""
+print (grupo1[2:5])
+grupo1 = list(grupo1)
+print ("la tuplas ahora es de tipo",type(grupo1),"\n")
+conjunto_vacio = set()
+conjunto_vacio1 = {}
+print (type(conjunto_vacio1))
+conjunto_colores = set({"azul","rojo","verde"})
+conjunto_animales = {"gato","perro","loro" }
+print (type(conjunto_colores))
+print (type(conjunto_animales))
+print ("primer set contiene los siguiente colores:", conjunto_colores)
+print ("el segundo set contiene los siguiente animasles:", conjunto_animales)
+#print (conjunto_colores[0])
+conjunto_colores.add("celeste")
+conjunto_animales.add("ganter")
+print ("los colores de conforma:", conjunto_colores)
+print ("los animales de conforma:", conjunto_animales)
