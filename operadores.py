@@ -73,4 +73,10 @@ if not bencina or encendido:
     print("el vehiculo puede avanzar")
 else:
     print("el vehiculo no avanza")
-   
+
+#utiliza el operador NOT junto or y and
+if not bencina or (encendido and edad > 18 ):
+    print("el vehiculo puede avanzar")
+else:
+    print("el vehiculo no avanza")
+      
