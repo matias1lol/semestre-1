@@ -1,16 +1,44 @@
+# Solicitar los nombres, pesos, estaturas y edades de los pacientes
+nombres = []
+pesos = []
+estaturas = []
+edades = []
 
-nombre1 = input(f"ingrese nombre del primer paciente: ")
-peso1 = float(input(f"ingrese el peso: "))
-estatura1 = float(input(f"ingrese el estatura: "))
-edad1 = (input(f"ingrese el edad: "))
-nombre2 = input(f"ingrese nombre del segundo paciente: ")
-peso2 = float(input(f"ingrese el peso: "))
-estatura2 = float(input(f"ingrese el estatura: "))
-edad2 = (input(f"ingrese el edad: "))
-nombre3 = input(f"ingrese nombre del tercer paciente: ")
-peso3 = float(input(f"ingrese el peso: "))
-estatura3 = float(input(f"ingrese el estatura: "))
-edad3 = (input(f"ingrese el edad: "))
-pacientes = ((nombre1,peso1,estatura1,edad1,nombre2,peso2,estatura2,edad2,nombre3,peso3,estatura3,edad3))
-print (list(pacientes))
-print (type(pacientes))
+for i in range(3):
+    # Pedir el nombre del paciente
+    nombre = input(f"Ingrese el nombre del paciente {i+1}: ")
+    nombres.append(nombre)
+
+    # Pedir el peso del paciente
+    peso = float(input(f"Ingrese el peso del paciente {i+1} en kg: "))
+    pesos.append(peso)
+
+    # Pedir la estatura del paciente
+    estatura = float(input(f"Ingrese la estatura del paciente {i+1} en metros: "))
+    estaturas.append(estatura)
+
+    # Pedir la edad del paciente
+    while True:
+        try:
+            edad = int(input(f"Ingrese la edad del paciente {i+1}: "))
+            if edad < 0 or edad > 120:
+                print("Error: la edad debe estar entre 0 y 120 años")
+            else:
+                edades.append(edad)
+                break
+        except ValueError:
+            print("Error: la edad debe ser un número entero")
+
+# Guardar la información en tuplas
+pacientes = []
+for i in range(3):
+    paciente = (nombres[i], pesos[i], estaturas[i], edades[i])
+    pacientes.append(paciente)
+
+# Mostrar la información de los pacientes
+for i, paciente in enumerate(pacientes):
+    print(f"Paciente {i+1}:")
+    print(f"Nombre: {paciente[0]}")
+    print(f"Peso: {paciente[1]} kg")
+    print(f"Estatura: {paciente[2]} m")
+    print(f"Edad: {paciente[3]} años")
