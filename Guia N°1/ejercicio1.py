@@ -9,3 +9,6 @@ for palabra in palabras:
         contador += 1
 resultado = (contador)  
 print(resultado)
+
+
+
