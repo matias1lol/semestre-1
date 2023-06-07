@@ -16,5 +16,5 @@ else:
     desglose_vuelto = desglosar_vuelto(vuelto)
     print("Desglose del vuelto:")
     for luca, cantidad in desglose_vuelto.items():
-        print(f"{cantidad} billetes de ${luca} pesos")
+        print(f"${luca} pesos")
 
