@@ -2,14 +2,12 @@
 # entrege el mismo nro. PERO invertido.
 # Ej:invierte nuemero (365) entrega 563
 def invierteNumero(numero):
-  if numero <100 or numero >999:
-      return -1
-  else:
-    c1=numero%10
-    c2=(numero//10)%10
-    c3=numero//100
-    print(c1,c2,c3)
 
+    centenas = numero // 100
+    decenas = (numero // 10) % 10
+    unidades = numero % 10
+    numero_invertido = unidades * 100 + decenas * 10 + centenas
+    return numero_invertido
 # Problema 2: conversión de grados Fahrenheit a Celsius
 def fahrenheitACelsius(fahrenheit):
     celsius = (fahrenheit - 32) * 5/9
@@ -23,8 +21,8 @@ def dolarAPesos(dolares):
 def areaTriangulo(base, altura):
     area = 0.5 * base * altura
     return area
-
-invierteNumero(100)
+num = 563
+print("numero invertido:", invierteNumero(num))
 temp_fahrenheit = 98.6
 print("temperatura en celsius:", fahrenheitACelsius(temp_fahrenheit))
 dolares = 50
