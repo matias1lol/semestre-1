@@ -1,4 +1,3 @@
-#Hecho Por Matias Garcia Gonzalez y Jeremias Maichil 
 class Pokemon:
     def __init__(self, nombre, tipo, altura, peso, sexo):
         self.nombre = nombre
@@ -22,10 +21,14 @@ class Pokemon:
         promedio_self = (self.ps_base + self.ataque + self.defensa + self.velocidad) / 4
         promedio_otro = (otro_pokemon.ps_base + otro_pokemon.ataque + otro_pokemon.defensa + otro_pokemon.velocidad) / 4
         return promedio_self > promedio_otro
-pika = Pokemon("Pikachu", "eléctrico", 0.4, 6.0, "h")
-charma = Pokemon("Charmander", "fuego", 0.6, 8.5, "m")
-pika.setPS_base(3)
-pika.setAtaque(13)
-pika.setDefensa(10)
-pika.setVelocidad(15)
-print(pika.esMejorQue(charma))
+lucario = Pokemon("lucario", "lucha", 1.2, 54.0, "m")
+Charizard = Pokemon("Charizard", "fuego", 1.7, 90.5, "m")
+lucario.setPS_base(5)
+lucario.setAtaque(7)
+lucario.setDefensa(5)
+lucario.setVelocidad(6)
+Charizard.setPS_base(5)
+Charizard.setAtaque(5)
+Charizard.setDefensa(5)
+Charizard.setVelocidad(6)
+print(lucario.esMejorQue(Charizard))
