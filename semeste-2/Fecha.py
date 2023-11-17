@@ -38,7 +38,7 @@ class Fecha:
 	def bisiesto(anio):
 		return (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0)
 	
-f = Fecha("01/06/2013")
+f = Fecha("01/05/2013")
 print(f)
 g = f.siguiente()
 print(g)
