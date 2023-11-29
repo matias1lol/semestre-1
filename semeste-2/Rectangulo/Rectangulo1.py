@@ -11,7 +11,7 @@ while True:
     alto = int(input("Alto? "))
     if ancho == 0 and alto == 0:
         break
-    r = Rectangulo(ancho, alto)
+    r = Rectangulo1(ancho, alto)
     rectangulos.append(r)
     r.dibujar("*")
 mas_grande = None
